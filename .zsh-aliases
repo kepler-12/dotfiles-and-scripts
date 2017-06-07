@@ -1,0 +1,33 @@
+# These are some common aliases I use
+#   Add them to your .zshrc file with the following line:
+# `[ -f .aliases ] && source .zsh-aliases`
+
+# Hub is a git wrapper with some neat features (https://github.com/github/hub)
+alias git="hub"
+
+# Sometimes necessary, use if you're having trouble running `composer'
+alias composer="composer.phar"
+
+# Download and install all Google Fonts on OSX
+alias googleFonts="curl https://raw.githubusercontent.com/qrpike/Web-Font-Load/master/install.sh | sh"
+
+# Show and hide hidden/dotfiles on OSX
+alias showFiles="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder"
+alias hideFiles="defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder"
+
+# Delete server mail from the system on OSX
+alias deleteMail="sudo rm /var/mail/zack"
+
+# Roots Products
+# Aliases for Roots various composer creation methods
+alias bedrock="composer create-project roots/bedrock"
+alias sage="f() { composer create-project roots/sage dev-master '$1' };f"
+
+# Laravel/PHP Helpers
+alias phpunit="./vendor/bin/phpunit"
+alias art="php artisan"
+alias migrate="php artisan migrate"
+
+# Git (pertty personal, you might like 'em though)
+alias gpp="git push && git push production"
+alias ca="git add --all && git commit -m"
